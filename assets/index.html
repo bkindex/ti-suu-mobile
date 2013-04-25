@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>.::( Tí Sửu )::.</title>
+        <meta http-equiv="Content-Type"  content="text/html" charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="src/css/jquery.mobile.structure-1.1.0.css" rel="stylesheet">
+        <link href="src/css/jquery.mobile.theme-1.1.0.css" rel="stylesheet">
+        <link href="src/css/custom.css" rel="stylesheet">
+        <script src="lib/jquery-1.6.4.js"></script>
+        <script src="lib/jquery.mobile-1.1.0.js"></script>
+		<script src='ai/module/rivescript.js' type="text/javascript"></script>
+		<script src='js/tisuu.js' type="text/javascript"></script>
+    </head>
+    
+    <body>
+        <div data-role="page" id="home" data-theme="e">
+            <div data-role="header" id="homeHeader" data-theme="b">
+                <h1>.::( Tí Sửu )::.</h1>
+            </div>
+            <div data-role="content">
+				<fieldset data-role="controlgroup"  data-type="horizontal" data-mini="true">
+                    <legend>Virtual Intelligent Entity?</legend>
+                    <input type="radio" id="chkAlice" name="chkAlice"
+                    value="alice" checked="checked">
+                    <label for="chkAlice">Alice (English)</label>
+                    <input type="radio" id="chkEliza" name="chkAlice"
+                    value="eliza">
+                    <label for="chkEliza">Eliza (English)</label>
+                    <input type="radio" id="chkTisuu" name="chkAlice" value="tisuu">
+                    <label for="chkTisuu">Tí sửu (Vietnamese)</label>
+				</fieldset>
+                <div data-role="fieldcontain">
+                    <label for="txtUserName">Nickname:</label>
+                    <input type="text" id="txtUserName" placeholder="What's your nickname?">
+                </div>
+                <a data-role="button" id="btnJoin" href="#Chatbox">Join2chat</a>
+            </div>
+        </div>
+        <div data-role="page" id="Chatbox" data-theme="e">
+            <div data-role="header" id="chatboxHeader" data-position="fixed" data-theme="b">
+                <h1>.::( Tí Sửu )::.</h1>
+                <a data-role="button" id="btnHome" href="#home" data-icon="home"
+                data-iconpos="notext">Home</a>
+                <a data-role="button" data-icon="back" data-iconpos="notext">Exit</a>
+            </div>
+            <div data-role="content">
+                <img id="imgCuteBull" src="images/bull-icon.png" alt="Cute Ball" width="165" height="165"
+                style="display: block; margin: 0 auto">
+                <form>
+					<div data-role="fieldcontain">
+							<div id="txtDialog" class="ui-display-text">&nbsp;</div>
+					</div>
+                    <div data-role="fieldcontain">
+						<div class="wrapper div-widget">
+							<input type="text" id="txtMessage" placeholder="What is your mind ?">
+							<a data-role="button" id="btnSend" data-icon="check" data-mini="true" data-inline="true">Send</a>
+						</div>
+                    </div>
+                </form>
+            </div>
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                <img id="btnMicrophone" src="images/microphone.128x128.png" alt="Voice" width="48"
+                height="48" style="display: block; margin: 0 auto">
+            </div>
+        </div>
+    </body>
+
+</html>
